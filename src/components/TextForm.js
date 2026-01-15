@@ -16,6 +16,10 @@ export default function TextForm(props) {
       setText(newText);
     }
 
+    const getWordCount=(str)=>{
+      return str.trim().split(/\s+/).filter((word)=>word.length>0).length;
+    }
+
     const handleOnChange=(event)=>{
       setText(event.target.value);
     }
@@ -45,7 +49,8 @@ export default function TextForm(props) {
 
     <div className="container my-3" style={{ color: props.mode === 'dark' ? 'white' : 'black' }}>
         <h1>Your text summary</h1>
-        <p>{text.split(" ").length} words and {text.length} characters</p>
+        {/* <p>{text.split(" ").length} words and {text.length} characters</p> */}
+        {<p>{getWordCount(text)} words and {text.length} characters</p>}
     </div>
     </>
   );
