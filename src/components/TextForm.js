@@ -24,8 +24,15 @@ export default function TextForm(props) {
 
     <div class="mb-3">
       
-     <h1>{props.heading}</h1>
+     <h1 style={{
+             
+          color: props.mode==='dark'?'white':'black'
+        }} >{props.heading}</h1>
       <textarea
+        style={{
+          backgroundColor: props.mode==='dark'?'#13466e':'white',   
+          color: props.mode==='dark'?'white':'black'
+        }}
         className="form-control"
         id="exampleFormControlTextarea1"
         rows="3"
@@ -36,9 +43,14 @@ export default function TextForm(props) {
     <button className="btn btn-primary me-2" onClick={convertToUppercase}>Convert to Uppercase</button>
     <button className="btn btn-primary me-2" onClick={convertToLowercase}>Convert to Lowercase  </button>
 
-    <div className="container my-3">
+    <div className="container my-3" style={{
+             
+          color: props.mode==='dark'?'white':'black'
+        }}>
         <h1>Your text summary</h1>
-        <p>{text.split(" ").length} words and {text.length} characters</p>
+        <p>
+  {text.trim() === "" ? 0 : text.trim().split(/\s+/).length} words and {text.length} characters
+</p>
     </div>
     </>
   );
