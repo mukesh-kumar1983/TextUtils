@@ -17,9 +17,7 @@ export default function Navbar(props) {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            {/* sdfds
-            sdfds
-            sdfds */}
+            
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
@@ -35,9 +33,7 @@ export default function Navbar(props) {
                 </a>
               </li>
             </ul>
-            {/* jklj
-            lkjkj
-            kjklj */}
+            
             <form className="d-flex" role="search">
               <input
                 className="form-control me-2"
