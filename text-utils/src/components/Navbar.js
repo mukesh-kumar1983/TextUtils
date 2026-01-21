@@ -32,10 +32,7 @@ export default function Navbar(props) {
                 </a>
               </li>
             </ul>
-            {/* fsdf
-            dfsd
-            fdsfs
-            fsdf */}
+            
             <form className="d-flex" role="search">
               <input
                 className="form-control me-2"
