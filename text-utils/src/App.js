@@ -8,8 +8,9 @@ import TextForm from './components/TextForm';
 function App() {
   return (
     <>
-    <div className="container">
+    
     <Navbar title="Text Utility" aboutText="About" />
+    <div className="container">
 
     <TextForm heading={"Enter the text to analyze below"} />
     

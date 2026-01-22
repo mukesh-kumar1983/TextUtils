@@ -33,7 +33,9 @@ export default function TextForm(props) {
 
   return (
     <>
+    <div className="container">
       <h1>{props.heading}</h1>
+      
         <div className="mb-3">
           
           <textarea
@@ -49,6 +51,16 @@ export default function TextForm(props) {
             <button className="btn btn-primary me-1" onClick={removeExtraSpacesClick}>Remove Extra Spaces</button>
             <button className="btn btn-primary me-1" onClick={clearTextClick} >Clear Text</button>
       
+    </div>
+
+    <div className="container my-3">
+      <h1>Your Text Summary</h1>
+      <p> Characters: {text.length} and words:{text.split(" ").length}</p>
+      {/* <p>Words: {text.split(/\s+/).filter(word => word !== "").length}</p> */}
+
+      <h2>Preview</h2>
+        <p>{text}</p>
+    </div>
     </>
   );
 }
