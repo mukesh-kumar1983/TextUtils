@@ -8,21 +8,25 @@ export default function TextForm(props) {
         
                 let newText = text.toUpperCase();
                 setText(newText);
+                props.showAlert("Converted to Uppercase!", "success");
     }
 
     const handleLoClick = () => {
                 let newText = text.toLowerCase();
                 setText(newText);
+                props.showAlert("Converted to Lowercase!", "success");
     }
 
     const clearTextClick = () => {
                 
                 setText("");
+                props.showAlert("Text Cleared!", "success");  
     }
 
     const removeExtraSpacesClick = () => {
                 let newText = text.replace(/\s+/g, ' ').trim();
                 setText(newText);
+                props.showAlert("Extra spaces removed!", "success");
     }
 
     const handleOnChange = (event) => {
@@ -44,6 +48,7 @@ export default function TextForm(props) {
             rows="5"
             value={text}
             onChange={handleOnChange}
+            
             style={{backgroundColor: props.mode==='dark'? '#343a40': 'light'}  }
           ></textarea>
         </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 // import {router, Link, Route, Router-Link-DOMException } from 'react-router-dom';
 
 export default function Navbar(props) {
@@ -58,3 +59,10 @@ export default function Navbar(props) {
     </>
   );
 }
+
+Navbar.propTypes = {
+  title: PropTypes.string.isRequired,
+  aboutText: PropTypes.string,
+  mode: PropTypes.string,
+  toggleMode: PropTypes.func,
+};
