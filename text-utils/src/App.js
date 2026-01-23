@@ -43,7 +43,7 @@ function App() {
 
   return (
     <>
-      <Navbar title="Text Utility" mode={mode} aboutText="About" toggleMode={toggleMode}/>
+      <Navbar  title="Text Utility" mode={mode} aboutText="About" toggleMode={toggleMode}/>
       <Alert alert={alert}/>
       <div className="container">
         <TextForm heading={"Enter the text to analyze below"} showAlert={showAlert} />
