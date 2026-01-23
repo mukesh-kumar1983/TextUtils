@@ -29,7 +29,7 @@ export default function TextForm(props) {
         setText(event.target.value);
     }
 
-    const [text, setText] = useState("Enter text here");
+    const [text, setText] = useState("");
 
   return (
     <>
@@ -44,6 +44,7 @@ export default function TextForm(props) {
             rows="5"
             value={text}
             onChange={handleOnChange}
+            style={{backgroundColor: props.mode==='dark'? '#343a40': 'light'}  }
           ></textarea>
         </div>
         <button className="btn btn-primary me-1" onClick={handleUpClick}>Convert to Uppercase</button>
@@ -59,7 +60,7 @@ export default function TextForm(props) {
       {/* <p>Words: {text.split(/\s+/).filter(word => word !== "").length}</p> */}
 
       <h2>Preview</h2>
-        <p>{text}</p>
+        <p>{text.length>0 ? text : "Enter text above to preview it here."}</p>
     </div>
     </>
   );
